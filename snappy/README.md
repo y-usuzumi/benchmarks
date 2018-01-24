@@ -9,11 +9,11 @@ Snappy
 
 The benchmark involves three sets of TTR, each containing 1, 32 and 32 TTRs.
 
-| File | Original size | Size of .kpack.sz |
-|------|---------------|-------------------|
-|    1 |          1084 | too-lazy-to-check |
-|    2 |         27003 |             23710 |
-|    3 |         26587 |             11374 |
+| File | Original size | Size of .sz |
+|------|---------------|-------------|
+|    1 |          1084 |         822 |
+|    2 |         27003 |        4948 |
+|    3 |         26587 |        4948 |
 
 
 ## Compression

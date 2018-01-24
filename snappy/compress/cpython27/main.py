@@ -18,10 +18,10 @@ def main():
         data = f.read()
     data = ''.join(repeat(data, concat_repetitions))
     start = time.time()
-    print("%6f" % start)
+    print("%.6f" % start)
     compress(data, iterations=iterations)
     end = time.time()
-    print("%6f" % end)
+    print("%.6f" % end)
 
 if __name__ == '__main__':
     main()

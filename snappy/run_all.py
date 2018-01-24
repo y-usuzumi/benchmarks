@@ -21,7 +21,7 @@ _DECOMPRESSION_RUNTIMES = ['cpython27', 'pypy2', 'go', 'rust']
 _DECOMPRESSION_TESTS = {
     'round_1': {
         'iterations': 10000,
-        'files': ['1.ttr.kpack.sz', '2.ttr.kpack.sz', '3.ttr.kpack.sz']
+        'files': ['1.ttr.sz', '2.ttr.sz', '3.ttr.sz']
     }
 }
 
@@ -49,13 +49,17 @@ def run_decompression(test_file, runtime, iterations):
     cwd = os.path.join(test_dir, runtime)
     cmd = 'run.sh'
     test_file = os.path.join(_CURR_DIR, '../_input_data', test_file)
-    p = subprocess.Popen(
-        ['sh', cmd, test_file, str(iterations)],
-        stdout=subprocess.PIPE,
-        cwd=cwd
-    )
-    output, _ = p.communicate()
-    start_time, end_time = [float(o) for o in output.split()]
+    try:
+        p = subprocess.Popen(
+            ['sh', cmd, test_file, str(iterations)],
+            stdout=subprocess.PIPE,
+            cwd=cwd
+        )
+        output, _ = p.communicate()
+        start_time, end_time = [float(o) for o in output.split()]
+    except subprocess.CalledProcessError:
+        traceback.print_exc()
+        start_time, end_time = 0, 0
     return start_time, end_time
 
 
@@ -68,7 +72,7 @@ def main():
             round_result = runtime_result.setdefault(round_id, {})
             cr, it, files = [round_cfg[k] for k in ['concat_repetitions', 'iterations', 'files']]
             for f in files:
-                print("%s / %s / %s" % (runtime, round_id, f))
+                print("Compression: %s / %s / %s" % (runtime, round_id, f))
                 file_result = round_result.setdefault(f, {})
                 start_time, end_time = run_compression(f, runtime, cr, it)
                 file_result['elapsed'] = end_time - start_time
@@ -80,7 +84,7 @@ def main():
             round_result = runtime_result.setdefault(round_id, {})
             it, files = [round_cfg[k] for k in ['iterations', 'files']]
             for f in files:
-                print("%s / %s / %s" % (runtime, round_id, f))
+                print("Decompression: %s / %s / %s" % (runtime, round_id, f))
                 file_result = round_result.setdefault(f, {})
                 start_time, end_time = run_decompression(f, runtime, it)
                 file_result['elapsed'] = end_time - start_time

@@ -1,2 +1,2 @@
-echo 0
-echo 0
+#!/bin/sh
+~/.virtualenvs/cpython27/bin/python main.py $@

@@ -1,2 +1,2 @@
-echo 0
-echo 0
+#!/bin/sh
+go run main.go $@
