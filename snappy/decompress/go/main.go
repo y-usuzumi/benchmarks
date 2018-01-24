@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"github.com/golang/snappy"
 	"io/ioutil"
@@ -10,8 +11,11 @@ import (
 )
 
 func decompress(data []byte, iterations int) {
+	buf := make([]byte, len(data)*10)
 	for i := 0; i < iterations; i++ {
-		_, e := snappy.Decode(nil, data)
+		reader := snappy.NewReader(bytes.NewReader(data))
+
+		_, e := reader.Read(buf)
 		if e != nil {
 			fmt.Println(e)
 			os.Exit(1)

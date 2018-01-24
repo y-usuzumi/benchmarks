@@ -11,8 +11,14 @@ import (
 )
 
 func compress(data []byte, iterations int) {
+	buf := make([]byte, len(data)*2)
 	for i := 0; i < iterations; i++ {
-		snappy.Encode(nil, data)
+		writer := snappy.NewWriter(bytes.NewBuffer(buf))
+		_, e := writer.Write(data)
+		if e != nil {
+			fmt.Println(e)
+			os.Exit(1)
+		}
 	}
 }
 
