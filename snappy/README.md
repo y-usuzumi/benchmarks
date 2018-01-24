@@ -20,13 +20,13 @@ The benchmark involves three sets of TTR, each containing 1, 32 and 32 TTRs.
 
 ### Round 1
 
-Compress three TTR text files. Repeat for 10000 times.
+Compress the three TTR text files. Repeat for 100000 times.
 
 ### Round 2
 
-Compress a concatenation of 1000 repetitive content of each TTR text files. Repeat for 10 times.
+Compress a concatenation of 1000 repetitive content of each TTR text files. Repeat for 100 times.
 
 
 ## Decompression
 
-Decompress three TTR .sz files. Repeat for 10000 times.
+Decompress the three TTR .sz files. Repeat for 100000 times.
