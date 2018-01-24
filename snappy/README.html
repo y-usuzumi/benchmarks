@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>README.html</title>
+
+</head>
+
+<body>
+
+<h2 id="snappy">Snappy</h2>
+<p><a href="https://github.com/google/snappy">Introduction</a></p>
+<h2 id="description">Description</h2>
+<h3 id="ttr">TTR</h3>
+<p>The benchmark involves three sets of TTR, each containing 1, 32 and 32 TTRs.</p>
+<table>
+<thead>
+<tr class="header">
+<th>File</th>
+<th>Original size</th>
+<th>Size of .kpack.sz</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>1084</td>
+<td>too-lazy-to-check</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>27003</td>
+<td>23710</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>26587</td>
+<td>11374</td>
+</tr>
+</tbody>
+</table>
+<h2 id="compression">Compression</h2>
+<h3 id="round-1">Round 1</h3>
+<p>Compress three TTR text files. Repeat for 10000 times.</p>
+<h3 id="round-2">Round 2</h3>
+<p>Compress a concatenation of 1000 repetitive content of each TTR text files. Repeat for 10 times.</p>
+<h2 id="decompression">Decompression</h2>
+<p>Decompress three TTR .sz files. Repeat for 10000 times.</p>
+
+</body>
+</html>
