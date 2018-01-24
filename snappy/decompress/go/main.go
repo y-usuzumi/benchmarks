@@ -11,7 +11,11 @@ import (
 
 func decompress(data []byte, iterations int) {
 	for i := 0; i < iterations; i++ {
-		snappy.Decode(nil, data)
+		_, e := snappy.Decode(nil, data)
+		if e != nil {
+			fmt.Println(e)
+			os.Exit(1)
+		}
 	}
 }
 

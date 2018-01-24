@@ -1,0 +1,152 @@
+{
+    "cpython27": {
+        "round_1": {
+            "1.ttr.text": {
+                "elapsed": 0.7175889015197754
+            },
+            "2.ttr.text": {
+                "elapsed": 8.079546928405762
+            },
+            "3.ttr.text": {
+                "elapsed": 8.072648048400879
+            }
+        },
+        "round_2": {
+            "1.ttr.text": {
+                "elapsed": 0.2818789482116699
+            },
+            "2.ttr.text": {
+                "elapsed": 7.660284042358398
+            },
+            "3.ttr.text": {
+                "elapsed": 7.65687108039856
+            }
+        }
+    },
+    "pypy2": {
+        "round_1": {
+            "1.ttr.text": {
+                "elapsed": 0.6597630977630615
+            },
+            "2.ttr.text": {
+                "elapsed": 10.535106182098389
+            },
+            "3.ttr.text": {
+                "elapsed": 10.492757081985474
+            }
+        },
+        "round_2": {
+            "1.ttr.text": {
+                "elapsed": 0.41541409492492676
+            },
+            "2.ttr.text": {
+                "elapsed": 9.16097092628479
+            },
+            "3.ttr.text": {
+                "elapsed": 9.149457931518555
+            }
+        }
+    },
+    "go": {
+        "round_1": {
+            "1.ttr.text": {
+                "elapsed": 1.2265100479125977
+            },
+            "2.ttr.text": {
+                "elapsed": 5.807558059692383
+            },
+            "3.ttr.text": {
+                "elapsed": 5.762517929077148
+            }
+        },
+        "round_2": {
+            "1.ttr.text": {
+                "elapsed": 0.04033088684082031
+            },
+            "2.ttr.text": {
+                "elapsed": 2.356062889099121
+            },
+            "3.ttr.text": {
+                "elapsed": 3.343414306640625
+            }
+        }
+    },
+    "rust": {
+        "round_1": {
+            "1.ttr.text": {
+                "elapsed": 0.609935998916626
+            },
+            "2.ttr.text": {
+                "elapsed": 3.300233840942383
+            },
+            "3.ttr.text": {
+                "elapsed": 3.316648006439209
+            }
+        },
+        "round_2": {
+            "1.ttr.text": {
+                "elapsed": 0.07051420211791992
+            },
+            "2.ttr.text": {
+                "elapsed": 2.6143901348114014
+            },
+            "3.ttr.text": {
+                "elapsed": 2.6353750228881836
+            }
+        }
+    }
+}
+{
+    "cpython27": {
+        "round_1": {
+            "1.ttr.sz": {
+                "elapsed": 0.652644157409668
+            },
+            "2.ttr.sz": {
+                "elapsed": 7.333266019821167
+            },
+            "3.ttr.sz": {
+                "elapsed": 7.290419101715088
+            }
+        }
+    },
+    "pypy2": {
+        "round_1": {
+            "1.ttr.sz": {
+                "elapsed": 0.572688102722168
+            },
+            "2.ttr.sz": {
+                "elapsed": 9.249014854431152
+            },
+            "3.ttr.sz": {
+                "elapsed": 9.303261995315552
+            }
+        }
+    },
+    "go": {
+        "round_1": {
+            "1.ttr.sz": {
+                "elapsed": null
+            },
+            "2.ttr.sz": {
+                "elapsed": null
+            },
+            "3.ttr.sz": {
+                "elapsed": null
+            }
+        }
+    },
+    "rust": {
+        "round_1": {
+            "1.ttr.sz": {
+                "elapsed": 0.6372189521789551
+            },
+            "2.ttr.sz": {
+                "elapsed": 2.6677961349487305
+            },
+            "3.ttr.sz": {
+                "elapsed": 2.695374011993408
+            }
+        }
+    }
+}

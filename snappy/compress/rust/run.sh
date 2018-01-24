@@ -1,2 +1,2 @@
-echo 0
-echo 0
+#!/bin/sh
+cargo run --release --manifest-path snappy-compress/Cargo.toml --quiet $@
