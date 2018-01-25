@@ -11,22 +11,15 @@ import (
 )
 
 func compress(data []byte, iterations int) {
-	buf := make([]byte, len(data)*2)
 	for i := 0; i < iterations; i++ {
-		writer := snappy.NewWriter(bytes.NewBuffer(buf))
-		_, e := writer.Write(data)
-		if e != nil {
-			fmt.Println(e)
-			os.Exit(1)
-		}
+		snappy.Encode(nil, data)
 	}
 }
 
-func now() float64 {
+func now() int64 {
 	now := time.Now()
-	now_secs := now.Unix()
 	now_nanos := now.UnixNano()
-	return float64(now_secs) + float64(now_nanos)*1e-9
+	return now_nanos
 }
 
 func main() {
@@ -37,8 +30,8 @@ func main() {
 	fbytes, _ := ioutil.ReadFile(f)
 	data := bytes.Repeat(fbytes, concatRepetitions)
 	start := now()
-	fmt.Printf("%.6f\n", start)
+	fmt.Printf("%d\n", start)
 	compress(data, iterations)
 	end := now()
-	fmt.Printf("%.6f\n", end)
+	fmt.Printf("%d\n", end)
 }

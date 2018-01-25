@@ -2,96 +2,120 @@
     "cpython27": {
         "round_1": {
             "1.ttr.text": {
-                "elapsed": 0.7184209823608398
+                "elapsed": 2247405824.0,
+                "ns_per_op": 2247.405824
             },
             "2.ttr.text": {
-                "elapsed": 7.936266183853149
+                "elapsed": 15310674944.0,
+                "ns_per_op": 15310.674944
             },
             "3.ttr.text": {
-                "elapsed": 7.9948039054870605
+                "elapsed": 15345913856.0,
+                "ns_per_op": 15345.913856
             }
         },
         "round_2": {
             "1.ttr.text": {
-                "elapsed": 0.29010677337646484
+                "elapsed": 159662080.0,
+                "ns_per_op": 1596620.8
             },
             "2.ttr.text": {
-                "elapsed": 7.5896689891815186
+                "elapsed": 11452070912.0,
+                "ns_per_op": 114520709.12
             },
             "3.ttr.text": {
-                "elapsed": 7.58930516242981
+                "elapsed": 11502659328.0,
+                "ns_per_op": 115026593.28
             }
         }
     },
     "pypy2": {
         "round_1": {
             "1.ttr.text": {
-                "elapsed": 0.6714389324188232
+                "elapsed": 3055382016.0,
+                "ns_per_op": 3055.382016
             },
             "2.ttr.text": {
-                "elapsed": 10.529261112213135
+                "elapsed": 46694870016.0,
+                "ns_per_op": 46694.870016
             },
             "3.ttr.text": {
-                "elapsed": 10.384090900421143
+                "elapsed": 46853158144.0,
+                "ns_per_op": 46853.158144
             }
         },
         "round_2": {
             "1.ttr.text": {
-                "elapsed": 0.4146549701690674
+                "elapsed": 614212096.0,
+                "ns_per_op": 6142120.96
             },
             "2.ttr.text": {
-                "elapsed": 9.072674036026001
+                "elapsed": 23690696960.0,
+                "ns_per_op": 236906969.6
             },
             "3.ttr.text": {
-                "elapsed": 9.11495304107666
+                "elapsed": 23908214016.0,
+                "ns_per_op": 239082140.16
             }
         }
     },
     "go": {
         "round_1": {
             "1.ttr.text": {
-                "elapsed": 2.737987995147705
+                "elapsed": 2191659520.0,
+                "ns_per_op": 2191.65952
             },
             "2.ttr.text": {
-                "elapsed": 13.679800033569336
+                "elapsed": 28284446976.0,
+                "ns_per_op": 28284.446976
             },
             "3.ttr.text": {
-                "elapsed": 13.5762939453125
+                "elapsed": 28452124928.0,
+                "ns_per_op": 28452.124928
             }
         },
         "round_2": {
             "1.ttr.text": {
-                "elapsed": 0.11753273010253906
+                "elapsed": 347970304.0,
+                "ns_per_op": 3479703.04
             },
             "2.ttr.text": {
-                "elapsed": 4.180895805358887
+                "elapsed": 12386880768.0,
+                "ns_per_op": 123868807.68
             },
             "3.ttr.text": {
-                "elapsed": 4.179136276245117
+                "elapsed": 12361171968.0,
+                "ns_per_op": 123611719.68
             }
         }
     },
     "rust": {
         "round_1": {
             "1.ttr.text": {
-                "elapsed": 0.5981588363647461
+                "elapsed": 1500759296.0,
+                "ns_per_op": 1500.759296
             },
             "2.ttr.text": {
-                "elapsed": 3.2363739013671875
+                "elapsed": 17520618240.0,
+                "ns_per_op": 17520.61824
             },
             "3.ttr.text": {
-                "elapsed": 3.2508530616760254
+                "elapsed": 17411493888.0,
+                "ns_per_op": 17411.493888
             }
         },
         "round_2": {
             "1.ttr.text": {
-                "elapsed": 0.06799602508544922
+                "elapsed": 167445504.0,
+                "ns_per_op": 1674455.04
             },
             "2.ttr.text": {
-                "elapsed": 2.606593132019043
+                "elapsed": 12390711040.0,
+                "ns_per_op": 123907110.4
             },
             "3.ttr.text": {
-                "elapsed": 2.5997769832611084
+                "elapsed": 12403560448.0,
+                "ns_per_op": 124035604.48
             }
         }
     }
@@ -99,53 +123,65 @@
 {
     "cpython27": {
         "round_1": {
-            "1.ttr.sz": {
-                "elapsed": 0.6542720794677734
+            "1.ttr.sz.2": {
+                "elapsed": 904780032.0,
+                "ns_per_op": 904.780032
             },
-            "2.ttr.sz": {
-                "elapsed": 7.253745079040527
+            "2.ttr.sz.2": {
+                "elapsed": 6371279872.0,
+                "ns_per_op": 6371.279872
             },
-            "3.ttr.sz": {
-                "elapsed": 7.210020065307617
+            "3.ttr.sz.2": {
+                "elapsed": 6415333120.0,
+                "ns_per_op": 6415.33312
             }
         }
     },
     "pypy2": {
         "round_1": {
-            "1.ttr.sz": {
-                "elapsed": 0.5666599273681641
+            "1.ttr.sz.2": {
+                "elapsed": 1956726272.0,
+                "ns_per_op": 1956.726272
             },
-            "2.ttr.sz": {
-                "elapsed": 9.122341871261597
+            "2.ttr.sz.2": {
+                "elapsed": 20956400896.0,
+                "ns_per_op": 20956.400896
             },
-            "3.ttr.sz": {
-                "elapsed": 9.09840202331543
+            "3.ttr.sz.2": {
+                "elapsed": 20854942976.0,
+                "ns_per_op": 20854.942976
             }
         }
     },
     "go": {
         "round_1": {
-            "1.ttr.sz": {
-                "elapsed": 4.299709796905518
+            "1.ttr.sz.2": {
+                "elapsed": 845267712.0,
+                "ns_per_op": 845.267712
             },
-            "2.ttr.sz": {
-                "elapsed": 8.006386756896973
+            "2.ttr.sz.2": {
+                "elapsed": 14658860800.0,
+                "ns_per_op": 14658.8608
             },
-            "3.ttr.sz": {
-                "elapsed": 8.023987770080566
+            "3.ttr.sz.2": {
+                "elapsed": 14171590912.0,
+                "ns_per_op": 14171.590912
             }
         }
     },
     "rust": {
         "round_1": {
-            "1.ttr.sz": {
-                "elapsed": 0.6317989826202393
+            "1.ttr.sz.2": {
+                "elapsed": 580366336.0,
+                "ns_per_op": 580.366336
             },
-            "2.ttr.sz": {
-                "elapsed": 2.6522750854492188
+            "2.ttr.sz.2": {
+                "elapsed": 7761270528.0,
+                "ns_per_op": 7761.270528
             },
-            "3.ttr.sz": {
-                "elapsed": 2.6628270149230957
+            "3.ttr.sz.2": {
+                "elapsed": 7887625984.0,
+                "ns_per_op": 7887.625984
             }
         }
     }

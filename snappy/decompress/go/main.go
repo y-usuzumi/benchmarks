@@ -11,33 +11,27 @@ import (
 )
 
 func decompress(data []byte, iterations int) {
-	buf := make([]byte, len(data)*10)
 	for i := 0; i < iterations; i++ {
-		reader := snappy.NewReader(bytes.NewReader(data))
-
-		_, e := reader.Read(buf)
-		if e != nil {
-			fmt.Println(e)
-			os.Exit(1)
-		}
+		snappy.Decode(nil, data)
 	}
 }
 
-func now() float64 {
+func now() int64 {
 	now := time.Now()
-	now_secs := now.Unix()
 	now_nanos := now.UnixNano()
-	return float64(now_secs) + float64(now_nanos)*1e-9
+	return now_nanos
 }
 
 func main() {
 	args := os.Args
 	f := args[1]
-	iterations, _ := strconv.Atoi(args[2])
-	data, _ := ioutil.ReadFile(f)
+	concatRepetitions, _ := strconv.Atoi(args[2])
+	iterations, _ := strconv.Atoi(args[3])
+	fbytes, _ := ioutil.ReadFile(f)
+	data := bytes.Repeat(fbytes, concatRepetitions)
 	start := now()
-	fmt.Printf("%.6f\n", start)
+	fmt.Printf("%d\n", start)
 	decompress(data, iterations)
 	end := now()
-	fmt.Printf("%.6f\n", end)
+	fmt.Printf("%d\n", end)
 }

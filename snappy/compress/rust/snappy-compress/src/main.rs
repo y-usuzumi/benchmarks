@@ -1,6 +1,6 @@
 extern crate snap;
 
-use std::io::{Cursor, Read, Result, Seek, SeekFrom, copy};
+use std::io::{Read, Result, Seek, SeekFrom};
 use std::env;
 use std::fs::File;
 use std::time::{SystemTime, UNIX_EPOCH};
@@ -15,13 +15,10 @@ fn read_file_as_bytes(file_name: &String, times: i32) -> Result<Vec<u8>> {
     Ok(fbytes)
 }
 
-fn compress<'a>(data: Vec<u8>, iterations: i32) {
-    let mut cursor = Cursor::new(data);
+fn compress(data: Vec<u8>, iterations: i32) {
+    let mut encoder = snap::Encoder::new();
     for _ in 0..iterations {
-        let mut v: Vec<u8> = Vec::new();
-        let mut compressor = snap::Writer::new(v);
-        let _ = copy(&mut cursor, &mut compressor);
-        cursor.set_position(0);
+        let _ = encoder.compress_vec(&data);
     }
 }
 
@@ -34,12 +31,12 @@ fn main() {
     let start = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
     let start_secs = start.as_secs();
     let start_nanos = start.subsec_nanos();
-    let start = (start_secs as f64) + (start_nanos as f64) / 1e9;
-    println!("{:.6}", start);
+    let start = start_secs * 1_000_000_000 + start_nanos as u64;
+    println!("{}", start);
     compress(data, iterations);
     let end = SystemTime::now().duration_since(UNIX_EPOCH).unwrap();
     let end_secs = end.as_secs();
     let end_nanos = end.subsec_nanos();
-    let end = (end_secs as f64) + (end_nanos as f64) / 1e9;
-    println!("{:.6}", end);
+    let end = end_secs * 1_000_000_000 + end_nanos as u64;
+    println!("{}", end);
 }

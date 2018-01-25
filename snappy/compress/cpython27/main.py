@@ -7,8 +7,7 @@ import snappy
 def compress(data, iterations=1):
     i = 0
     while i < iterations:
-        compressor = snappy.StreamCompressor()
-        _ = compressor.add_chunk(data)
+        _ = snappy.compress(data)
         i += 1
 
 
@@ -17,11 +16,11 @@ def main():
     with open(f, 'rb') as f:
         data = f.read()
     data = ''.join(repeat(data, concat_repetitions))
-    start = time.time()
-    print("%.6f" % start)
+    start = time.time() * 1e9
+    print("%d" % start)
     compress(data, iterations=iterations)
-    end = time.time()
-    print("%.6f" % end)
+    end = time.time() * 1e9
+    print("%d" % end)
 
 if __name__ == '__main__':
     main()
